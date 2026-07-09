@@ -1073,6 +1073,17 @@ body.video-modal-open header {
    RESPONSIVE OVERHAUL (MOBILE, TABLET, LAPTOP)
    ========================================================================== */
 
+/* Global Anti-Overflow & Sizing */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+img, video, iframe, canvas {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Utility classes */
 .desktop-only {
   display: flex !important;
@@ -1082,20 +1093,71 @@ body.video-modal-open header {
   display: none !important;
 }
 
-@media (max-width: 1024px) {
-  .hero h1 {
-    font-size: clamp(2.5rem, 6vw, 5rem) !important;
-  }
-  .gallery-section {
-    padding: 60px 0 !important;
+.hide-on-mobile {
+  display: flex !important;
+}
+
+.hide-on-tablet {
+  display: flex !important;
+}
+
+/* Fluid Typography Base */
+.hero h1 {
+  font-size: clamp(2.5rem, 8vw, 6.6rem) !important;
+}
+
+.section-title {
+  font-size: clamp(1.5rem, 5vw, 3rem) !important;
+}
+
+/* Large Screens (1440px+) */
+@media (min-width: 1440px) {
+  .nav-container {
+    max-width: 1400px;
   }
 }
 
-@media (max-width: 768px) {
-  /* Layout utilities */
-  .desktop-only {
+/* Laptops / Small Desktops (1024px - 1439px) */
+@media (max-width: 1439px) {
+  .hero-hud-frame {
+    left: 3% !important;
+    right: 3% !important;
+  }
+}
+
+/* Tablets (768px - 1023px) */
+@media (max-width: 1023px) {
+  .hide-on-tablet {
     display: none !important;
   }
+  
+  .hero-hud-frame {
+    left: 2% !important;
+    right: 2% !important;
+    padding: 10px !important;
+  }
+
+  .gallery-section {
+    padding: 60px 20px !important;
+  }
+
+  header {
+    width: 95% !important;
+    padding: 10px 20px !important;
+  }
+
+  .social-hub-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+  }
+}
+
+/* Mobile (Up to 767px) */
+@media (max-width: 767px) {
+  /* Layout utilities */
+  .desktop-only, .hide-on-mobile {
+    display: none !important;
+  }
+  
   .mobile-only {
     display: flex !important;
   }
@@ -1104,12 +1166,14 @@ body.video-modal-open header {
   .hero {
     padding: 0 15px !important;
   }
+  
   .hero h1 {
-    font-size: clamp(2.2rem, 8vw, 3.5rem) !important;
-    letter-spacing: 6px !important;
+    font-size: clamp(2rem, 10vw, 3.5rem) !important;
+    letter-spacing: 4px !important;
   }
+  
   .hero p {
-    font-size: 0.9rem !important;
+    font-size: 1rem !important;
     letter-spacing: 1px !important;
     max-width: 95% !important;
   }
@@ -1118,24 +1182,30 @@ body.video-modal-open header {
   .custom-arrow-cursor {
     display: none !important;
   }
+  
   * {
     cursor: auto !important;
   }
   
+  /* Touch target optimizations */
+  button, a, .interactive {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
   /* Remove scrollbar hiding so mobile users can scroll normally, or keep it minimal */
   ::-webkit-scrollbar {
-    width: 2px;
+    width: 4px;
   }
   
   /* Global section spacing */
   section, .gallery-section, footer {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
   }
   
   .section-title {
     padding-left: 0 !important;
-    font-size: 1.5rem !important;
     margin-bottom: 30px !important;
     text-align: center;
   }
@@ -1143,39 +1213,54 @@ body.video-modal-open header {
   /* Contact terminal fixes */
   .social-hub-grid {
     grid-template-columns: 1fr !important;
+    gap: 15px !important;
   }
+  
   .social-card {
     padding: 25px 20px !important;
   }
   
+  .social-card .stats-row {
+    flex-wrap: wrap !important;
+  }
+
   /* Footer */
   footer {
     flex-direction: column !important;
     gap: 20px !important;
     text-align: center !important;
-    padding: 40px 20px !important;
+    padding: 40px 15px !important;
+  }
+
+  footer > div {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* Slide Items */
+  .slide-item {
+    width: 280px !important;
+    height: 157px !important;
   }
 }
 
+/* Small Mobile (Up to 480px) */
 @media (max-width: 480px) {
-  /* Smaller mobile fixes */
   .hero h1 {
-    font-size: clamp(1.8rem, 10vw, 2.5rem) !important;
-    letter-spacing: 4px !important;
+    font-size: clamp(1.8rem, 12vw, 2.5rem) !important;
+    letter-spacing: 3px !important;
   }
   
   header {
     padding: 10px 15px !important;
-    width: 95% !important;
+    width: 100% !important;
+    border-radius: 0 !important;
+    top: 0 !important;
   }
   
   .slide-item {
     width: 260px !important;
     height: 146px !important;
-  }
-  
-  /* Contact stats wrapping */
-  .social-card .stats-row {
-    flex-wrap: wrap !important;
   }
 }
