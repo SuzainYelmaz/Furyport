@@ -71,7 +71,7 @@ export default function ContactTerminal() {
 
             {/* Middle Row: Biography & Metrics */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '15px', marginBottom: '30px' }}>
-              <p style={{ fontSize: '13.5px', lineHeight: '1.6', color: 'var(--muted-color)', margin: 0, fontWeight: 300 }}>
+              <p style={{ fontSize: '14.5px', lineHeight: '1.6', color: 'var(--muted-color)', margin: 0, fontWeight: 500 }}>
                 Visual artist and experimentalist specializing in 3D abstract forms, spatial motion design, and high-fidelity CG simulations. Showcasing daily visual concepts and production lookdevs.
               </p>
 
@@ -189,7 +189,7 @@ export default function ContactTerminal() {
 
             {/* Middle Row: Biography & Metrics */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '15px', marginBottom: '30px' }}>
-              <p style={{ fontSize: '13.5px', lineHeight: '1.6', color: 'var(--muted-color)', margin: 0, fontWeight: 300 }}>
+              <p style={{ fontSize: '14.5px', lineHeight: '1.6', color: 'var(--muted-color)', margin: 0, fontWeight: 500 }}>
                 Director and motion designer. Sharing experimental CG workflows, project updates, visual direction breakdowns, sound design concepts, and industry collaborations.
               </p>
 
@@ -308,7 +308,7 @@ export default function ContactTerminal() {
 
             {/* Middle Row: Biography & Metrics */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '15px', marginBottom: '30px' }}>
-              <p style={{ fontSize: '13.5px', lineHeight: '1.6', color: 'var(--muted-color)', margin: 0, fontWeight: 300 }}>
+              <p style={{ fontSize: '14.5px', lineHeight: '1.6', color: 'var(--muted-color)', margin: 0, fontWeight: 500 }}>
                 Official repository for high-resolution 3D visualizers, production design showreels, cinematic video works, and experimental audio-visual synchronization breakdowns.
               </p>
 
@@ -428,7 +428,7 @@ export default function ContactTerminal() {
 
             {/* Middle Row: Biography & Metrics */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '15px', marginBottom: '30px' }}>
-              <p style={{ fontSize: '13.5px', lineHeight: '1.6', color: 'var(--muted-color)', margin: 0, fontWeight: 300 }}>
+              <p style={{ fontSize: '14.5px', lineHeight: '1.6', color: 'var(--muted-color)', margin: 0, fontWeight: 500 }}>
                 Production-ready 3D abstract kits, lighting setups, blender project files, visual elements, and motion design templates built specifically for professional industry creators.
               </p>
 
@@ -547,7 +547,7 @@ export default function ContactTerminal() {
 
             {/* Middle Row: Biography & Metrics */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '15px', marginBottom: '30px' }}>
-              <p style={{ fontSize: '13.5px', lineHeight: '1.6', color: 'var(--muted-color)', margin: 0, fontWeight: 300 }}>
+              <p style={{ fontSize: '14.5px', lineHeight: '1.6', color: 'var(--muted-color)', margin: 0, fontWeight: 500 }}>
                 For business inquiries, project collaborations, and direct communication. Feel free to reach out via email for a prompt response.
               </p>
 
